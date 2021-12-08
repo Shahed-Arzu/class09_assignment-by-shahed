@@ -43,7 +43,7 @@ h1:hover::after{
     height: 100px;
     background-color: orange;
     margin: 200px auto;
-    transition: 1s;
+    transition: 2s;
   }
   
   
