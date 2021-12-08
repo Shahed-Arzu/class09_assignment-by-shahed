@@ -1,0 +1,35 @@
+h1{
+    position: relative;
+    text-align: center;
+}
+h1::before{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    content: '';
+    width: 100px;
+    height: 5px;
+    background-color:yellow;
+    transform: translateX(-50%);
+    transition: 2s;
+}
+h1::after{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    content: '';
+    width: 100px;
+    height: 5px;
+    background-color:blue;
+    transform: translateX(-50%);
+    transition: 2s;
+}
+h1:hover{
+    color:chocolate
+}
+h1:hover::before{
+    top:calc(100% + 5px);
+}
+h1:hover::after{
+    bottom: calc(100% + 5px);
+}
