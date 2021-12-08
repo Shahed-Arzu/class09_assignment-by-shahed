@@ -33,3 +33,54 @@ h1:hover::before{
 h1:hover::after{
     bottom: calc(100% + 5px);
 }
+
+
+
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 200px auto;
+    transition: 1s;
+  }
+  
+  
+  .box::before {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    content: '';
+    width: inherit;
+    height: inherit;
+    background-color:rgb(9, 2, 19);
+    transition: 2s;
+  }
+  
+  .box::after {
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    content: '';
+    width: inherit;
+    height: inherit;
+    background-color: chocolate;
+    transition: 2s;
+  }
+  
+  .box:hover {
+    background-color:black;
+  }
+  
+  .box:hover::before {
+    left: 100%;
+    top: 100%;
+    background-color:yellow;
+  }
+  
+  .box:hover::after {
+    left: -100%;
+    top: -100%;
+    background-color: blue;
+  }
